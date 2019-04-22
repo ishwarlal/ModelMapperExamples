@@ -36,6 +36,15 @@ Output Of ModelMapper Startegies Example
 
 ################## Loose Startegy ##################
 
+Code:
+
+    Employee e = Util.getDefaultEmployeeData();
+    EmployeeDTO e2 = new EmployeeDTO();
+
+    ModelMapper mapper = new ModelMapper();
+    mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.LOOSE);
+    mapper.map(e, e2);
+
 -----Actual Employee---
 
 Employee [employeeId=1, name=ABC, email=test@yahoo.com, phone=12342134, addresses=[EmployeeAddress [employeeId=1, address=STREET 1, country=HOME Country, city=HOME City, addressType=Home], EmployeeAddress [employeeId=1, address=STREET 2, country=OFFICE Country, city=OFFICE City, addressType=OFFICE]], department=Department [departmentId=1, name=Software Development, description=Software Development]]
@@ -49,6 +58,16 @@ EmployeeDTO [employeeId=1, employeeName=ABC, email=test@yahoo.com, mobilePhone=1
 
 ################## Standard Startegy ##################
 
+Code:
+
+    Employee e = Util.getDefaultEmployeeData();
+    EmployeeDTO e2 = new EmployeeDTO();
+
+    ModelMapper mapper = new ModelMapper();
+    mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STANDARD);
+    mapper.map(e, e2);
+    
+
 -----Actual Employee---
 
 Employee [employeeId=1, name=ABC, email=test@yahoo.com, phone=12342134, addresses=[EmployeeAddress [employeeId=1, address=STREET 2, country=OFFICE Country, city=OFFICE City, addressType=OFFICE], EmployeeAddress [employeeId=1, address=STREET 1, country=HOME Country, city=HOME City, addressType=Home]], department=Department [departmentId=1, name=Software Development, description=Software Development]]
@@ -61,6 +80,16 @@ EmployeeDTO [employeeId=1, employeeName=ABC, email=test@yahoo.com, mobilePhone=n
 
 
 ################## Strict Startegy ##################
+
+Code:
+
+    Employee e = Util.getDefaultEmployeeData();
+    EmployeeDTO e2 = new EmployeeDTO();
+
+    ModelMapper mapper = new ModelMapper();
+    mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+    mapper.map(e, e2);
+    
 
 -----Actual Employee---
 
