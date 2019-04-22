@@ -1,6 +1,35 @@
 # ModelMapperExamples
 ModelMapper Examples
 
+
+public class Employee {
+
+	private Integer employeeId;
+	private String email;
+	private String phone;
+	private String name;
+	private Set<EmployeeAddress> addresses;
+	private Department department;
+  
+  --- Getter -- Setter 
+}
+
+public class EmployeeDTO {
+
+	private Integer employeeId;
+	private String employeeName;
+	private String email;
+	private String mobilePhone;
+	private String cellPhone;
+	private String nickName;
+	private String age;
+	private Set<EmployeeAddressDTO> addresses;
+	private DepartmentDTO department;
+  
+  --- Getter -- Setter 
+}
+
+
 Output Of ModelMapper Startegies Example
 
 (Run ModelMapper.strategies.StartegiesMainExample.java)
