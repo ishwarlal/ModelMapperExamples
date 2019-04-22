@@ -2,7 +2,7 @@
 ModelMapper Examples
 
 
-public class Employee {
+    public class Employee {
 
 	private Integer employeeId;
 	private String email;
@@ -11,10 +11,10 @@ public class Employee {
 	private Set<EmployeeAddress> addresses;
 	private Department department;
   
-  --- Getter -- Setter 
-}
+     --- Getter -- Setter 
+    }
 
-public class EmployeeDTO {
+    public class EmployeeDTO {
 
 	private Integer employeeId;
 	private String employeeName;
@@ -26,8 +26,8 @@ public class EmployeeDTO {
 	private Set<EmployeeAddressDTO> addresses;
 	private DepartmentDTO department;
   
-  --- Getter -- Setter 
-}
+     --- Getter -- Setter 
+    }
 
 
 Output Of ModelMapper Startegies Example
